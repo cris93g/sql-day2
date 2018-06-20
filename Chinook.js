@@ -30,3 +30,45 @@ SELECT t.name, p.Name
 FROM Track t
 JOIN PlayListTrack pt ON t.TrackId = pt.TrackId
 Join Playlist p ON pt.PlaylistId = p.PlaylistId;
+
+
+SELECT t.Name, a.title
+FROM Track t
+JOIN Album a  ON t.AlbumId =a.AlbumId
+JOIN Genre g ON g.GenreId = t.GenreId
+WHERE g.Name ="Alternative";
+
+
+SELECT *
+FROM invoice
+WHERE InvoiceId IN (SELECT InvoiceId FROM InvoiceLine WHERE UnitPrice>0.99);
+
+
+SELECT *
+FROM PlayListTrack
+WHERE PlaylistId IN (SELECT PlaylistId FROM Playlist WHERE Name ="Music"
+
+
+SELECT Name
+FROM Track
+WHERE TrackId IN (SELECT TrackId FROM PlaylistTrack WHERE PlaylistId=5);
+
+
+SELECT *
+FROM Track
+WHERE GenreId IN (SELECT GenreId FROM Genre WHERE Name ="Comedy")
+
+
+ 
+SELECT *
+FROM Track 
+WHERE AlbumId IN (SELECT AlbumId FROM Album WHERE Title="Fireball")
+
+
+
+SELECT *
+ FROM Track
+ WHERE AlbumId IN(
+  SELECT AlbumId FROM Album WHERE ArtistId IN (
+   SELECT ArtistId FROM Artist WHERE Name ="Queen"
+  )
