@@ -72,3 +72,30 @@ SELECT *
   SELECT AlbumId FROM Album WHERE ArtistId IN (
    SELECT ArtistId FROM Artist WHERE Name ="Queen"
   )
+
+
+    
+  UPDATE Customer
+  SET Fax =null
+  WHERE Fax IS NOT null;
+
+  UPDATE Customer
+  SET Company = "Self"
+  WHERE Company IS null;
+
+   
+ UPDATE Customer
+ SET LastNAME ="Thompson"
+ WHERE FirstName="Julia" 
+ AND LastName ="Batnett";
+
+
+ UPDATE Customer
+ SET SupportRepId=4
+ WHERE Email= "luisrojas@yahoo.cl";
+ 
+
+ UPDATE Track
+ SET Composer ="The darkness around us"
+ WHERE GenreId=(SELECT GenreId FROM Genre WHERE Name="Metal")
+ AND Composer IS null;
