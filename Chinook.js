@@ -20,3 +20,13 @@ SELECT pt.TrackId
 FROM PlayListTrack pt
 JOIN Playlist p ON p.PlaylistId= pt.PlaylistId
 WHERE p.Name ="Music"
+
+SELECT t.Name
+FROM Track t
+JOIN PlaylistTrack pt ON pt.TrackId = t.TrackId
+WHERE pt.PlaylistId = 5;
+
+SELECT t.name, p.Name
+FROM Track t
+JOIN PlayListTrack pt ON t.TrackId = pt.TrackId
+Join Playlist p ON pt.PlaylistId = p.PlaylistId;
