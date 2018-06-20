@@ -99,3 +99,21 @@ SELECT *
  SET Composer ="The darkness around us"
  WHERE GenreId=(SELECT GenreId FROM Genre WHERE Name="Metal")
  AND Composer IS null;
+
+
+
+ SELECT COUNT (*), g.Name
+FROM Track t
+JOIN Genre g ON t.GenreId = g.GenreId
+GROUP BY g.Name;
+
+
+SELECT Count (*), g.Name
+FROM Track t
+JOIN Genre g ON g.GenreId= t.GenreId
+GROUP BY g.Name;
+
+SELECT ar.Name,COUNT(*)
+FROM Artist ar
+JOIN Album al ON ar.ArtistId= al.ArtistId
+GROUP BY al.ArtistId;
