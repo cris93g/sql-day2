@@ -117,3 +117,13 @@ SELECT ar.Name,COUNT(*)
 FROM Artist ar
 JOIN Album al ON ar.ArtistId= al.ArtistId
 GROUP BY al.ArtistId;
+
+
+SELECT DISTINCT Composer
+FROM Track;
+
+SELECT DISTINCT BillingPostalCode
+FROM Invoice;
+
+SELECT DISTINCT Company
+FROM Customer;
