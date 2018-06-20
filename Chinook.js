@@ -127,3 +127,16 @@ FROM Invoice;
 
 SELECT DISTINCT Company
 FROM Customer;
+
+
+
+DELETE FROM practice_delete
+WHERE Type= "bronze";
+
+
+
+DELETE FROM practice_delete
+WHERE type ="silver";
+
+DELETE FROM practice_delete
+WHERE Value=150;
